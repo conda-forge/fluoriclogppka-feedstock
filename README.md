@@ -32,10 +32,11 @@ Current release info
 Installing fluoriclogppka
 =========================
 
-Installing `fluoriclogppka` from the `conda-forge` channel can be achieved by adding `conda-forge` to your channels with:
+Installing `fluoriclogppka` from the `conda-forge` channel can be achieved by adding `conda-forge` and `dglteam` to your channels with:
 
 ```
 conda config --add channels conda-forge
+conda config --add channels dglteam
 conda config --set channel_priority strict
 ```
 
