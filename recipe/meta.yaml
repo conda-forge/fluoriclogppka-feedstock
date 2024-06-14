@@ -1,5 +1,5 @@
 {% set name = "fluoriclogppka" %}
-{% set version = "0.2.5" %}
+{% set version = "0.2.6" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/fluoriclogppka-{{ version }}.tar.gz
-  sha256: 5ee1df02f75f4ed17f27ed1059298e285920f277117301a6fc3a512073fa96b2
+  sha256: d01ef0d3d42727def9d32a7e7c733ae044bed41d2957989de593e5cf637e39f2
 
 build:
   noarch: python
