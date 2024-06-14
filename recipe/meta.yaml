@@ -1,5 +1,5 @@
 {% set name = "fluoriclogppka" %}
-{% set version = "0.2.5" %}
+{% set version = "0.2.6" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/fluoriclogppka-{{ version }}.tar.gz
-  sha256: 5ee1df02f75f4ed17f27ed1059298e285920f277117301a6fc3a512073fa96b2
+  sha256: d01ef0d3d42727def9d32a7e7c733ae044bed41d2957989de593e5cf637e39f2
 
 build:
   noarch: python
@@ -27,22 +27,22 @@ requirements:
     - idna ==3.6
     - mordred ==1.2.0
     - networkx ==2.8.8
-    - numpy ==1.26.4
-    - pandas ==2.2.0
-    - pillow ==10.2.0
+    - numpy >=1.26.4
+    - pandas >=2.2.0
+    - pillow >=10.2.0
     - pyarrow ==15.0.0
     - python-dateutil ==2.8.2
     - pytz ==2024.1
     - rdkit ==2022.9.5
     - requests ==2.31.0
-    - six ==1.16.0
+    - six >=1.16.0
     - tabulate ==0.9.0
     - urllib3 ==2.2.1
     - pytorch
     - torchvision
     - dgl
     - dgllife ==0.3.2
-    - torchdata ==0.7.1
+    - torchdata >=0.6.0
     - pyyaml ==6.0.1
     - pydantic ==2.5.3
 
