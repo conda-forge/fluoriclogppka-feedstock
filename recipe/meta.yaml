@@ -1,3 +1,4 @@
+{% set python_min = '3.11' %}
 {% set name = "fluoriclogppka" %}
 {% set version = "0.2.7" %}
 
@@ -6,20 +7,20 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/fluoriclogppka-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/fluoriclogppka-{{ version }}.tar.gz
   sha256: c5cda102def8229b8fe39c0a3cca7355b075252b44f3fee348db3a9369be00e5
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 2
 
 requirements:
   host:
-    - python >=3.11
+    - python {{ python_min }}
     - pip
   run:
-    - python >=3.11
+    - python >={{ python_min }}
     - certifi ==2024.2.2
     - charset-normalizer ==3.3.2
     - future ==1.0.0
@@ -54,6 +55,7 @@ test:
     - pip check || true  # We allow the check to fail because of a problem with rdkit, because the rdkit package is missing the required pip installation information.
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/blackthorn-ai/fluoricLogPpKa
